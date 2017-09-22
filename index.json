@@ -8,6 +8,7 @@ Usage: pm2 start index.json
         {
             "name": "gurariy.com",
             "script": "./index.js",
+            "interpreter_args": "--nolazy --use_strict",
             "env": {
                 "PORT": "8000",
                 "HOSTNAME": "10.0.0.1"
