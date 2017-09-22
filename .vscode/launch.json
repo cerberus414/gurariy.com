@@ -6,6 +6,10 @@
                 "request": "launch",
                 "name": "Launch Program",
                 "program": "${workspaceRoot}\\index.js",
+                "runtimeArgs": [
+                    "--nolazy",
+                    "--use_strict"
+                ],
                 "env": {
                     //"HOSTNAME": "10.0.0.1",
                     "HOSTNAME": "127.0.0.1",
