@@ -1,7 +1,10 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
-http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type' : 'text/plain'});
-    res.write('Hello World!');
-    res.end();
-}).listen(8000, '10.0.0.1');
+app.get('/home', function (req, res) {
+    res.send('Hello World!');
+});
+
+app.listen(process.env.PORT, process.env.HOSTNAME, function() {  
+    console.log('Express listening on port %d', process.env.PORT);
+});

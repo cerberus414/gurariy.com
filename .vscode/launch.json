@@ -7,8 +7,9 @@
                 "name": "Launch Program",
                 "program": "${workspaceRoot}\\index.js",
                 "env": {
-                    "HOSTNAME": "10.0.0.1",
-                    "PORT": 8000
+                    //"HOSTNAME": "10.0.0.1",
+                    "HOSTNAME": "127.0.0.1",
+                    "PORT": "8000"
                 }
             }
         ]
