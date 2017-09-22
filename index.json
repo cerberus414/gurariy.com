@@ -1,0 +1,17 @@
+/* 
+Description: Application configs used by PM2 (Node Process Manager) to start a daemon and monitor the node app
+More info: http://pm2.keymetrics.io/docs/usage/application-declaration/#json-format
+Usage: pm2 start index.json
+*/
+{
+    "apps": [
+        {
+            "name": "gurariy.com",
+            "script": "./index.js",
+            "env": {
+                "PORT": "8000",
+                "HOSTNAME": "10.0.0.1"
+            }
+        }
+    ]
+}
