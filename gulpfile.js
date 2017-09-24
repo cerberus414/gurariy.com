@@ -18,14 +18,15 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     /* 
         1. Transpile JSX, ES6 into ES5
-        2. Traverse require dependency tree and bundle all JS files into one
+        2. Traverse require() dependency tree and bundle all JS files into a singular JS file
         3. Minify JS file
+        4. Move file to public directory
     */
     browserify('./app/index.js', { debug: true })
         .transform(babelify)
         .bundle()
         .on('error', function(err) { console.error(err); })
-        .pipe(source('site.js'))
+        .pipe(source('site.js')) // TODO: Research vinyl source streams.
         .pipe(gulp.dest('./public/scripts'));
 });
 
