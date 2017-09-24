@@ -1,0 +1,13 @@
+<html>
+    <head>
+        {{> head}}
+    </head>
+    <body>
+        <div id="container" class="main">
+            {{{ body }}}
+        </div>
+        {{#if page.script}}
+        <script src="{{ page.script }}"></script>
+        {{/if}}
+    </body>
+</html>
