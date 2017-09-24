@@ -7,10 +7,7 @@ module.exports = {
             defaultLayout: 'layout',
             extname: '.handlebars',
             layoutsDir: path.resolve(viewsPath, './layouts'),
-            partialsDir: path.resolve(viewsPath, './partials'),
-            helpers: {
-                scriptPath: '/public/scripts/site.js'
-            }
+            partialsDir: path.resolve(viewsPath, './partials')
         });
         return hbs.engine;
     }
