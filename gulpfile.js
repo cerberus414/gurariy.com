@@ -30,4 +30,5 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./public/scripts'));
 });
 
+// Usage: gulp default
 gulp.task('default', ['assets', 'styles', 'scripts']);
