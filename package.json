@@ -18,7 +18,8 @@
   "homepage": "https://github.com/cerberus414/gurariy.com#readme",
   "dependencies": {
     "express": "^4.15.4",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "react": "^16.0.0"
   },
   "devDependencies": {
     "babelify": "^7.3.0",
