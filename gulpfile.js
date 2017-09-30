@@ -31,9 +31,11 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./app/**/*', ['scripts']);
-    gulp.watch('./resources/styles/**/*', ['styles']);
+    gulp.watch('./app/**/*.{js,jsx}', ['scripts']);
+    gulp.watch('./resources/styles/**/*.scss', ['styles']);
 });
 
+gulp.task('compile', ['assets', 'styles', 'scripts']);
+
 // Usage: gulp default
-gulp.task('default', ['assets', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['compile', 'watch']);

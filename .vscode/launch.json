@@ -6,6 +6,7 @@
                 "request": "launch",
                 "name": "Launch Program",
                 "program": "${workspaceRoot}\\index.js",
+                "preLaunchTask": "compile", // Does a one time call to "gulp compile"
                 "runtimeArgs": [
                     "--nolazy",
                     "--use_strict"
