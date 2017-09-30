@@ -2,11 +2,22 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
+    "command": "gulp",
+    "type": "shell",
     "tasks": [
-        {
-            "taskName": "echo",
-            "type": "shell",
-            "command": "echo Hello"
-        }
-    ]
+		{
+            "taskName": "default",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "isBackground": true
+		}
+	]
 }
