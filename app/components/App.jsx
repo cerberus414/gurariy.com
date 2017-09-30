@@ -1,9 +1,9 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Home = require('./Home/index.jsx');
-const About = require('./About/index.jsx');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Home from './Home/index.jsx';
+import About from './About/index.jsx';
 
-class App extends React.Component {
+export default class App extends React.Component {
     render() {
         var Child;
 
@@ -19,6 +19,7 @@ class App extends React.Component {
 const render = function() {
     var route = window.location.hash.substr(1);
     ReactDOM.render(<App route={route} />, document.querySelector('#container'));
-}();
+};
 
 window.addEventListener('hashchange', render);
+render();
