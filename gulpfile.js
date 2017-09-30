@@ -11,7 +11,7 @@ gulp.task('assets', function() {
 
 gulp.task('styles', function() {
     gulp.src('./resources/styles/styles.scss')
-        .pipe(sass().on('error', /*sass.logError*/ function(err) { console.error(err); }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./public/styles'));
 });
 
@@ -30,5 +30,10 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./public/scripts'));
 });
 
+gulp.task('watch', function() {
+    gulp.watch('./app/**/*', ['scripts']);
+    gulp.watch('./resources/styles/**/*', ['styles']);
+});
+
 // Usage: gulp default
-gulp.task('default', ['assets', 'styles', 'scripts']);
+gulp.task('default', ['assets', 'styles', 'scripts', 'watch']);
