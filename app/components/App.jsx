@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './Home/index.jsx';
 import About from './About/index.jsx';
+import Header from './Common/Header.jsx';
 
 export default class App extends React.Component {
     render() {
@@ -12,7 +13,12 @@ export default class App extends React.Component {
             default: Child = Home;
         }
 
-        return <Child/>;
+        return (
+            <div>
+                <Header />
+                <Child />
+            </div>
+        );
     }
 }
 
