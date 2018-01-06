@@ -6,7 +6,7 @@
     "type": "shell",
     "tasks": [
 		{
-            "taskName": "default",
+            "label": "default",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -20,7 +20,7 @@
             "isBackground": true
         },
         {
-            "taskName": "compile",
+            "label": "compile",
             "group": "build",
             "presentation": {
                 "echo": true,
