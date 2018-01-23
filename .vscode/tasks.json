@@ -21,6 +21,9 @@
         },
         {
             "label": "compile",
+            "args": [
+                "compile"
+            ],
             "group": "build",
             "presentation": {
                 "echo": true,
